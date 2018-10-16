@@ -1,17 +1,30 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <v-app>
+      <v-toolbar app color="red" class="white--text darken-1">
+      <v-toolbar-title>
+        {{title}}
+      </v-toolbar-title>
+    </v-toolbar>
+      <v-content>
+        <Test msg="Welcome to Your Vue.js App"/>
+      </v-content>
+  </v-app>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Test from './components/Test.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Test
+  },
+  data () {
+    return {
+      title: 'Learnet Academy - C202 - Final Exam'
+    }
   }
 }
 </script>
@@ -21,8 +34,7 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 0px;
 }
 </style>
